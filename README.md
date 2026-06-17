@@ -1,68 +1,64 @@
 # 🚀 Xeno AI Transaction Validator
 
-Enterprise-grade CSV Validation & Data Quality Platform built for the Xeno Internship Assignment.
+![React](https://img.shields.io/badge/React-18-blue)
+![Node.js](https://img.shields.io/badge/Node.js-Backend-green)
+![Express](https://img.shields.io/badge/Express.js-API-black)
+![Vercel](https://img.shields.io/badge/Frontend-Vercel-success)
+![Render](https://img.shields.io/badge/Backend-Render-purple)
 
-The platform validates transaction datasets, detects data quality issues, generates downloadable reports, performs schema validation, creates country-wise analytics, and exports cleaned datasets for further processing.
+Enterprise-grade AI-powered CSV Transaction Validation Platform built using React.js, Node.js, Express.js, and advanced validation logic.
+
+---
+
+## 🌐 Live Demo
+
+### Frontend
+
+https://xeno-data-validator.vercel.app
+
+### Backend API
+
+https://xeno-data-validator-backend.onrender.com
 
 ---
 
 ## 📌 Problem Statement
 
-Organizations often receive large transaction datasets containing invalid phone numbers, incorrect dates, missing fields, and unsupported payment modes. Manual verification is time-consuming and error-prone.
+Organizations frequently receive large transaction datasets containing invalid phone numbers, missing fields, incorrect dates, and unsupported payment methods.
 
-Xeno AI Transaction Validator automates this process by validating, cleaning, analyzing, and reporting transaction data through a simple web-based interface.
+Manual validation is time-consuming, error-prone, and difficult to scale.
 
----
-
-## 🎯 Key Features
-
-### Data Validation Engine
-
-* Phone Number Validation
-* Date Format Validation
-* Payment Mode Validation
-* Multi-Country Validation Support
-* Required Column Validation
-* Transaction Integrity Checks
-
-### CSV Processing
-
-* CSV Upload & Processing
-* Cleaned CSV Generation
-* Invalid Record Detection
-* Automatic CSV Splitting
-* Validation Report Generation
-
-### Analytics Dashboard
-
-* Total Records Summary
-* Valid Records Count
-* Invalid Records Count
-* AI Data Quality Score
-* AI Validation Insights
-* Country Analytics Dashboard
-
-### Error Detection
-
-* Phone Number Errors
-* Date Validation Errors
-* Payment Validation Errors
-* Missing Required Columns
-* Record-Level Error Identification
-
-### Export Features
-
-* Download Cleaned CSV
-* Download Validation Report
-* Validation Statistics Export
+Xeno AI Transaction Validator automates this process by validating, cleaning, analyzing, and generating downloadable reports for transaction datasets through a modern web interface.
 
 ---
 
-## 🧠 Advanced Features Implemented
+## 🎯 Project Highlights
 
-### 1. CSV Schema Validation
+✔ Multi-Country Transaction Validation
 
-Before processing any file, the system verifies whether all required columns exist.
+✔ CSV Schema Validation
+
+✔ AI-Powered Data Quality Analysis
+
+✔ Country Analytics Dashboard
+
+✔ Validation Report Generator
+
+✔ Cleaned CSV Export
+
+✔ Full Stack Deployment
+
+✔ Enterprise-Style Dashboard
+
+✔ Real-Time Validation Feedback
+
+---
+
+## ✨ Features
+
+### 🛡 CSV Schema Validation
+
+Before processing any dataset, the system verifies whether all required columns exist.
 
 Required Columns:
 
@@ -73,53 +69,103 @@ Required Columns:
 * date
 * payment_mode
 
-If any required column is missing, processing is stopped and a detailed error message is displayed.
+Invalid CSV files are automatically rejected with detailed feedback.
 
 ---
 
-### 2. AI Data Quality Score
+### 🌍 Multi-Country Validation Engine
 
-The platform calculates a Data Quality Score based on validation success rate.
+Country-specific validation rules:
+
+#### India
+
+* Exactly 10 digits
+
+#### Singapore
+
+* Exactly 8 digits
+
+The architecture is easily extendable for additional countries.
+
+---
+
+### 📅 Date Validation
+
+Validates transaction dates using:
+
+YYYY-MM-DD
+
+Invalid formats are detected and flagged automatically.
+
+---
+
+### 💳 Payment Mode Validation
+
+Supported Payment Modes:
+
+* UPI
+* Cash
+* Card
+
+Unsupported values are marked invalid.
+
+---
+
+### 🤖 AI Data Quality Score
+
+Automatically calculates dataset quality based on validation success rate.
 
 Example:
 
 * Total Records: 100
 * Valid Records: 85
 
-Data Quality Score:
+Quality Score:
 
 85%
 
-This provides a quick assessment of dataset reliability.
+This provides a quick overview of dataset reliability.
 
 ---
 
-### 3. Country Analytics Dashboard
+### 📊 AI Validation Insights
 
-The platform automatically groups records country-wise and displays:
+Generates intelligent validation insights including:
+
+* Invalid record count
+* Validation status
+* Dataset quality score
+* Processing summary
+
+---
+
+### 🌎 Country Analytics Dashboard
+
+Provides country-wise analytics including:
 
 * Total Records
 * Valid Records
 * Invalid Records
 
-This helps identify region-specific data quality issues.
+Helps identify regional data quality issues.
 
 ---
 
-### 4. AI Validation Insights
+### 📁 File Summary Dashboard
 
-After processing, the platform generates intelligent insights such as:
+Displays:
 
-* Number of invalid records
-* Validation completion status
-* Dataset quality score
-* Data quality assessment
+* Total Records
+* Valid Records
+* Invalid Records
+* Countries Detected
+* Validation Success Rate
 
 ---
 
-### 5. Validation Report Generator
+### 📄 Validation Report Generator
 
-Generates downloadable reports containing:
+Automatically generates downloadable reports containing:
 
 * Total Records
 * Valid Records
@@ -131,51 +177,39 @@ Generates downloadable reports containing:
 
 ---
 
-## 📋 Validation Rules
+### 📥 Cleaned CSV Export
 
-### Phone Validation
+Exports validated records into a cleaned CSV file suitable for:
 
-#### India
-
-* Must contain exactly 10 digits
-
-#### Singapore
-
-* Must contain exactly 8 digits
+* Data Warehousing
+* Analytics Pipelines
+* Reporting Systems
+* Business Intelligence Tools
 
 ---
 
-### Date Validation
+## 🔄 Application Workflow
 
-Supported Format:
-
-YYYY-MM-DD
-
-Example:
-
-2026-06-17
-
----
-
-### Payment Mode Validation
-
-Supported Modes:
-
-* UPI
-* Cash
-* Card
-* Wallet
-* Net Banking
+1. Upload CSV Dataset
+2. Validate CSV Schema
+3. Validate Phone Numbers
+4. Validate Dates
+5. Validate Payment Modes
+6. Generate AI Insights
+7. Calculate Data Quality Score
+8. Generate Country Analytics
+9. Create Validation Report
+10. Download Cleaned Dataset
 
 ---
 
-## 🛠️ Tech Stack
+## 🛠 Tech Stack
 
 ### Frontend
 
 * React.js
-* CSS3
 * Axios
+* CSS3
 
 ### Backend
 
@@ -184,88 +218,128 @@ Supported Modes:
 * Multer
 * CSV Parser
 
+### Deployment
+
+* Vercel
+* Render
+
 ### Data Processing
 
 * File System (FS)
 * Custom Validation Engine
 
-### Deployment
-
-* Vercel (Frontend)
-
 ---
 
 ## 📂 Project Structure
 
-Xeno-Assignment
-
+```text
+xeno-data-validator
+│
 ├── frontend
-
-│ ├── src
-
-│ ├── App.jsx
-
-│ ├── App.css
-
-│ └── ...
-
+│   ├── src
+│   ├── App.jsx
+│   ├── App.css
+│   └── package.json
 │
-
 ├── backend
-
-│ ├── server.js
-
-│ ├── validator.js
-
-│ ├── uploads
-
-│ └── output
-
+│   ├── server.js
+│   ├── validator.js
+│   ├── uploads
+│   ├── output
+│   └── package.json
 │
-
 └── README.md
+```
 
 ---
 
-## 📊 Sample Workflow
+## 📸 Application Screenshots
 
-1. Upload CSV File
-2. Validate Required Columns
-3. Validate Phone Numbers
-4. Validate Dates
-5. Validate Payment Modes
-6. Generate Validation Insights
-7. Calculate Data Quality Score
-8. Create Country Analytics
-9. Generate Validation Report
-10. Download Cleaned Dataset
+### 🏠 Home Dashboard
+
+![Home Dashboard](https://github.com/Aartigarg446/xeno-data-validator/blob/main/home.png?raw=true)
 
 ---
 
-## 🌐 Live Demo
+### 📤 CSV Upload Interface
 
-Frontend URL:
-
-https://xeno-data-validator.vercel.app
+![Upload](https://github.com/Aartigarg446/xeno-data-validator/blob/main/upload.png?raw=true)
 
 ---
 
-## 👨‍💻 Developed By
+### 🛡 Schema Validation
 
-Aarti Garg
-
-Final Year B.Tech CSE Student
-
-Built as part of the Xeno Internship Assignment 2026.
+![Schema Validation](https://github.com/Aartigarg446/xeno-data-validator/blob/main/schema-validation.png?raw=true)
 
 ---
 
-## ⭐ Future Enhancements
+### 📊 File Summary Dashboard
+
+![File Summary](https://github.com/Aartigarg446/xeno-data-validator/blob/main/filesummary1.png?raw=true)
+
+---
+
+### 🌎 Country Analytics Dashboard
+
+![Country Analytics](https://github.com/Aartigarg446/xeno-data-validator/blob/main/countryanalytics.png?raw=true)
+
+---
+
+### 📁 Cleaned CSV Export
+
+![Cleaned CSV](https://github.com/Aartigarg446/xeno-data-validator/blob/main/cleaned.csv.png?raw=true)
+
+---
+
+### 📄 Validation Report
+
+![Validation Report](https://github.com/Aartigarg446/xeno-data-validator/blob/main/validationreport.png?raw=true)
+
+---
+
+## 📊 Sample Dataset Format
+
+```csv
+order_id,product_name,phone,country,date,payment_mode
+
+1001,Laptop,9876543210,India,2026-06-17,UPI
+1002,Phone,12345,India,2026-06-17,Cash
+```
+
+---
+
+## 🚀 Future Enhancements
 
 * AI Anomaly Detection
-* Dynamic Validation Rules
-* User Authentication
+* Fraud Detection Engine
+* Interactive Charts
+* Role-Based Access Control
 * Database Integration
-* Real-Time Processing Pipeline
-* Interactive Data Visualizations
-* Multi-File Batch Processing
+* Real-Time Streaming Validation
+* Batch File Processing
+* Cloud Storage Integration
+
+---
+
+## 💼 Business Use Cases
+
+* FinTech Platforms
+* Banking Systems
+* E-Commerce Applications
+* Analytics Pipelines
+* Data Migration Projects
+* Transaction Monitoring Systems
+
+---
+
+## 👨‍💻 Author
+
+**Aarti Garg**
+
+Computer Science Engineering Student
+
+Built as part of the Xeno Software Engineering Assignment.
+
+---
+
+⭐ If you found this project useful, consider giving the repository a star.
