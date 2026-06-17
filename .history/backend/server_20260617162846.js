@@ -28,60 +28,12 @@ app.get("/", (req, res) => {
   res.send("Backend Running");
 });
 app.post("/upload", upload.single("file"), (req, res) => {
-   const results = [];
-   const fileContent = fs.readFileSync(
-  req.file.path,
-  "utf8"
-);
 
-console.log("FILE CONTENT:");
-console.log(fileContent);
-  const requiredColumns = [
-  "order_id",
-  "product_name",
-  "phone",
-  "country",
-  "date",
-  "payment_mode"
-];
-
-const firstNonEmptyLine = fileContent
-  .split("\n")
-  .find(line => line.trim() !== "");
-
-console.log("HEADER LINE:");
-console.log(firstNonEmptyLine);
-
-const uploadedColumns = firstNonEmptyLine
-  .split(",")
-  .map(col => col.trim().replace("\r", ""));
-
-console.log(uploadedColumns);
-
-const missingColumns =
-  requiredColumns.filter(
-    col =>
-      !uploadedColumns.some(
-        uploaded =>
-          uploaded.toLowerCase() ===
-          col.toLowerCase()
-      )
-  );
-
-if (missingColumns.length > 0) {
-
-  return res.status(400).json({
-    message:
-      "Missing Required Columns",
-    missingColumns
-  });
-
-}
+  const results = [];
 
   fs.createReadStream(req.file.path)
     .pipe(
       csv({
-        
         headers: [
           "order_id",
           "product_name",
@@ -125,25 +77,6 @@ data.overallStatus =
   isPaymentValid
     ? "Valid"
     : "Invalid";
-    if (!isPhoneValid) {
-  data.errorReason =
-    "Phone Number Error";
-}
-
-else if (!isDateValid) {
-  data.errorReason =
-    "Date Format Error";
-}
-
-else if (!isPaymentValid) {
-  data.errorReason =
-    "Payment Mode Error";
-}
-
-else {
-  data.errorReason =
-    "No Error";
-}
 
   data.phoneStatus = isPhoneValid
     ? "Valid"

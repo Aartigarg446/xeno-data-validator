@@ -218,46 +218,6 @@ setMessage("✅ CSV Processed Successfully");
   </div>
 )}
 {stats.total > 0 && (
-
-<div className="country-card">
-
-  <h3>🌍 Country Analytics</h3>
-
-  {Object.entries(countryStats).map(
-    ([country, data]) => (
-
-     <div className="country-row">
-
-  <h4>{country}</h4>
-
-  <div className="country-stats">
-
-    <div className="mini-stat">
-      <span>Total</span>
-      <h3>{data.total}</h3>
-    </div>
-
-    <div className="mini-stat valid-box">
-      <span>Valid</span>
-      <h3>{data.valid}</h3>
-    </div>
-
-    <div className="mini-stat invalid-box">
-      <span>Invalid</span>
-      <h3>{data.invalid}</h3>
-    </div>
-
-  </div>
-
-</div>
-
-    )
-  )}
-
-</div>
-
-)}
-{stats.total > 0 && (
   <div className="quality-card">
     {stats.total > 0 && (
   <div className="insights-card">

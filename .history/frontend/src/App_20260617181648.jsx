@@ -226,30 +226,20 @@ setMessage("✅ CSV Processed Successfully");
   {Object.entries(countryStats).map(
     ([country, data]) => (
 
-     <div className="country-row">
+      <div
+        key={country}
+        className="country-row"
+      >
 
-  <h4>{country}</h4>
+        <strong>{country}</strong>
 
-  <div className="country-stats">
+        <p>Total: {data.total}</p>
 
-    <div className="mini-stat">
-      <span>Total</span>
-      <h3>{data.total}</h3>
-    </div>
+        <p>Valid: {data.valid}</p>
 
-    <div className="mini-stat valid-box">
-      <span>Valid</span>
-      <h3>{data.valid}</h3>
-    </div>
+        <p>Invalid: {data.invalid}</p>
 
-    <div className="mini-stat invalid-box">
-      <span>Invalid</span>
-      <h3>{data.invalid}</h3>
-    </div>
-
-  </div>
-
-</div>
+      </div>
 
     )
   )}

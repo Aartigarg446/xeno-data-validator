@@ -12,31 +12,6 @@ function App() {
 });
 
 const [records, setRecords] = useState([]);
-const countryStats = {};
-
-records.forEach((record) => {
-
-  if (!countryStats[record.country]) {
-
-    countryStats[record.country] = {
-      total: 0,
-      valid: 0,
-      invalid: 0
-    };
-
-  }
-
-  countryStats[record.country].total++;
-
-  if (
-    record.overallStatus === "Valid"
-  ) {
-    countryStats[record.country].valid++;
-  } else {
-    countryStats[record.country].invalid++;
-  }
-
-});
 
   const uploadFile = async () => {
     if (!file) {
@@ -68,28 +43,10 @@ setStats({
 });
 
 setMessage("✅ CSV Processed Successfully");
-    } 
-    catch (error) {
-
-  console.log(error);
-
-  if (
-    error.response &&
-    error.response.data &&
-    error.response.data.missingColumns
-  ) {
-
-    setMessage(
-      `Missing Required Columns: ${error.response.data.missingColumns.join(", ")}`
-    );
-
-  } else {
-
-    setMessage("Upload Failed");
-
-  }
-
-}
+    } catch (error) {
+      console.log(error);
+     setMessage("❌ Upload Failed");
+    }
   };
 
   return (
@@ -179,83 +136,6 @@ setMessage("✅ CSV Processed Successfully");
   </div>
 
 </div>
-)}
-{stats.total > 0 && (
-  <div className="summary-card">
-
-    <h3>📄 File Summary</h3>
-
-    <p>
-      Records Processed: {stats.total}
-    </p>
-
-    <p>
-      Valid Records: {stats.valid}
-    </p>
-
-    <p>
-      Invalid Records: {stats.invalid}
-    </p>
-
-    <p>
-      Countries Found: {
-        [...new Set(
-          records.map(
-            record => record.country
-          )
-        )].length
-      }
-    </p>
-
-    <p>
-      Validation Success Rate:
-      {" "}
-      {Math.round(
-        (stats.valid / stats.total) * 100
-      )}%
-    </p>
-
-  </div>
-)}
-{stats.total > 0 && (
-
-<div className="country-card">
-
-  <h3>🌍 Country Analytics</h3>
-
-  {Object.entries(countryStats).map(
-    ([country, data]) => (
-
-     <div className="country-row">
-
-  <h4>{country}</h4>
-
-  <div className="country-stats">
-
-    <div className="mini-stat">
-      <span>Total</span>
-      <h3>{data.total}</h3>
-    </div>
-
-    <div className="mini-stat valid-box">
-      <span>Valid</span>
-      <h3>{data.valid}</h3>
-    </div>
-
-    <div className="mini-stat invalid-box">
-      <span>Invalid</span>
-      <h3>{data.invalid}</h3>
-    </div>
-
-  </div>
-
-</div>
-
-    )
-  )}
-
-</div>
-
 )}
 {stats.total > 0 && (
   <div className="quality-card">
@@ -359,7 +239,6 @@ setMessage("✅ CSV Processed Successfully");
 <th>Date</th>
 <th>Payment</th>
 <th>Status</th>
-<th>Error Reason</th>
   </tr>
 </thead>
     <tbody>
@@ -382,9 +261,6 @@ setMessage("✅ CSV Processed Successfully");
   >
     {record.overallStatus}
   </span>
-</td>
-<td>
-  {record.errorReason}
 </td>
 </tr>
 

@@ -45,18 +45,16 @@ console.log(fileContent);
   "payment_mode"
 ];
 
-const firstNonEmptyLine = fileContent
-  .split("\n")
-  .find(line => line.trim() !== "");
+ 
+  const firstLine = fs
+  .readFileSync(req.file.path, "utf8")
+  .split("\n")[0]
+  .trim();
 
-console.log("HEADER LINE:");
-console.log(firstNonEmptyLine);
-
-const uploadedColumns = firstNonEmptyLine
+const uploadedColumns = firstLine
   .split(",")
   .map(col => col.trim().replace("\r", ""));
-
-console.log(uploadedColumns);
+  console.log(uploadedColumns);
 
 const missingColumns =
   requiredColumns.filter(

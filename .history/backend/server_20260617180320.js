@@ -45,14 +45,9 @@ console.log(fileContent);
   "payment_mode"
 ];
 
-const firstNonEmptyLine = fileContent
-  .split("\n")
-  .find(line => line.trim() !== "");
-
-console.log("HEADER LINE:");
-console.log(firstNonEmptyLine);
-
-const uploadedColumns = firstNonEmptyLine
+ 
+const uploadedColumns = fileContent
+  .split("\n")[0]
   .split(",")
   .map(col => col.trim().replace("\r", ""));
 
