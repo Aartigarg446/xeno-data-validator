@@ -6,7 +6,7 @@
 ![Vercel](https://img.shields.io/badge/Frontend-Vercel-success)
 ![Render](https://img.shields.io/badge/Backend-Render-purple)
 
-Enterprise-grade AI-powered CSV Transaction Validation Platform built using React.js, Node.js, Express.js, and advanced validation logic.
+Enterprise-grade AI-powered CSV Transaction Validation Platform for validating, cleaning, analyzing, and exporting transaction datasets.
 
 ---
 
@@ -15,6 +15,11 @@ Enterprise-grade AI-powered CSV Transaction Validation Platform built using Reac
 🚀 Frontend: https://xeno-data-validator.vercel.app
 
 ⚙ Backend API: https://xeno-data-validator-backend.onrender.com
+
+---
+
+📂 GitHub Repository:
+https://github.com/Aartigarg446/xeno-data-validator
 
 ---
 
@@ -406,6 +411,8 @@ order_id,product_name,phone,country,date,payment_mode
 Unlike a basic CSV validator, this platform not only detects errors but also provides meaningful insights through analytics, data quality scoring, validation summaries, and downloadable outputs.
 
 The goal was to create a practical solution that improves data quality while keeping the user experience simple and efficient.
+
+---
 
 ## 👨‍💻 Author
 
