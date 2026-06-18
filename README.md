@@ -12,13 +12,9 @@ Enterprise-grade AI-powered CSV Transaction Validation Platform built using Reac
 
 ## 🌐 Live Demo
 
-### Frontend
+🚀 Frontend: https://xeno-data-validator.vercel.app
 
-https://xeno-data-validator.vercel.app
-
-### Backend API
-
-https://xeno-data-validator-backend.onrender.com
+⚙ Backend API: https://xeno-data-validator-backend.onrender.com
 
 ---
 
@@ -217,9 +213,6 @@ Exports validated records into a cleaned CSV file suitable for:
 | Data Quality Score          | ⭐ Bonus Feature |
 | Country Analytics Dashboard | ⭐ Bonus Feature |
 
-```
-```
-
 
 ## 🔄 Application Workflow
 
@@ -260,6 +253,14 @@ Validation Report Generation
 Cleaned CSV Export
 ```
 
+
+## 📈 Project Metrics
+
+- Validation Rules Implemented: 4+
+- Countries Supported: 2+
+- Downloadable Outputs: 2
+- Deployment Platforms: Vercel + Render
+- Validation Modules: Schema, Phone, Date, and Payment Validation
 
 
 ## 🛠 Tech Stack
