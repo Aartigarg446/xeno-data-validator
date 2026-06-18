@@ -1,5 +1,7 @@
 # 🚀 Xeno AI Transaction Validator
 
+Built for the Xeno Software Engineering Assignment 2026
+
 ![React](https://img.shields.io/badge/React-18-blue)
 ![Node.js](https://img.shields.io/badge/Node.js-Backend-green)
 ![Express](https://img.shields.io/badge/Express.js-API-black)
@@ -418,7 +420,7 @@ The goal was to create a practical solution that improves data quality while kee
 
 **Aarti Garg**
 
-Computer Science Engineering Student
+Final Year B.Tech CSE Student | CGC Landran
 
 Built as part of the Xeno Software Engineering Assignment.
 
